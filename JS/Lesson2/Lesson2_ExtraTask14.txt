@@ -1,0 +1,8 @@
+Compare two wishes: "I want to be a QA Engineer" and "I don't want to do my 
+homework". The wish that has a higher value of the string will come true.
+Will I become a QA Engineer? 
+
+ let str1 = 'I want to be a QA Engineer';
+ let str2 = "I don't want to do my homework";
+ console.log(str1 > str2);
+ console.log(`Will I become a QA Engineer? `);

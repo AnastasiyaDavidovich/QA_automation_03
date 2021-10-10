@@ -1,0 +1,32 @@
+Solve a task with logical operators in such a way as on example:
+
+Example:
+ let chocolate = true;
+ let strawberry = false;
+ let apple = true;
+ let caramel = true;
+
+ case 1: I want ((strawberry and chocolate) or apple) or no caramel
+ let icecream = ((strawberry && chocolate) || apple) || !caramel;
+ console.log("case 1: " + icecream);
+
+ case 2: I want (strawberry and (chocolate or apple)) or without caramel
+ icecream = (strawberry && (chocolate || apple)) || !caramel;
+ console.log("case 2: " + icecream);
+
+TASKS:
+case 1: (Number a is bigger than number b) and b is not equal to 0 or a 
+is not negative number; => the result is true
+case 2: (Number a is a positive number or number b is a positive number) 
+or b is not equal to 0 and a is equal to 7; => the result is true
+
+ let a = 5;
+ let b = 7;
+
+case 1:
+ let case1 = (a > b) && b !== 0 || a >= 0;
+ console.log('case 1: ' + case1);
+
+case 2:
+ let case2 = (a >= 0 || b >= 0) || b !== 0 && a == 7;
+ console.log('case 2: ' + case2);

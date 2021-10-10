@@ -1,0 +1,19 @@
+ let color= 'blue';
+ let price=10000;
+ let make='Toyota';
+ let used = true ;
+  Case1 I want new  Mercedes car which is blue and price >15000        => false
+      Mercedes && blue && price >15000
+  
+ 
+let case1 = !make && color && !price;
+ console.log(case1);
+
+  
+Case2 I want used car with price 5000 or blue Toyota                 => true 
+       price 5000 || blue && Toyota
+ 
+
+let case2 = 5000 < price || color && make;
+ console.log(case2);
+

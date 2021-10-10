@@ -1,0 +1,11 @@
+You were paid 5000 in January, and in February you were paid 20% more. 
+A warehouse has 1500 boxes with size 24 x 24 x 12” and 2000 boxes 
+with size 24 x 18 x 12”. It needs to pack some goods with a volume 
+of 15 000 cubic feet. Print in console true if the warehouse has enough 
+boxes to pack all the goods, or false if it doesn’t have enough boxes.
+
+
+
+ let v = 1500 * (24 / 12 * 24 / 12 * 12 / 12) + 2000 * (24 / 12 * 18 / 12 * 12 / 12);
+ let v1 = 15000;
+ console.log(v >= v1);

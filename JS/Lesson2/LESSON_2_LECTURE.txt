@@ -1,0 +1,265 @@
+//Data type => boolean 
+
+//console.log(typeof true);
+
+/* 
+Булевый тип (boolean) может принимать только два значения: true (истина) и 
+// false (ложь).
+
+ Такой тип, как правило, используется для хранения значений да/нет: true значит «да,
+ // правильно», а false значит «нет, не правильно».
+*/
+
+// const teachersNameIsJulia = true;              
+// const weStudyJavaHere = false; 
+
+//======================================
+// Операторы cравнения
+
+/* 
+Булевые значения также могут быть результатом сравнений: 
+           a < b, a > b
+*/
+
+// const a = 10;
+// const b = 2;
+
+// console.log(a < b);    //меньше
+// console.log(a > b);    //больше
+
+
+/* 
+          a >= b, a <= b 
+
+*/
+
+// const c = 5;
+// const d = 5;
+
+// console.log(c <= d);   //меньше или равно
+// console.log(c >= d);   //больше или равно
+
+/* 
+            Не строгое равно: a == b
+            сравниваем математические величины
+*/
+// const e = 5;
+// const f = 5;
+
+// console.log (e == f)
+
+/* 
+            cтрогое равно: a === b
+сравниваем математические величины и типы данных
+
+*/
+// const g = 5;
+// const h = '5'
+// console.log (g === h);
+// console.log (g == h);
+
+/*
+Не равно. В математике обозначается символом ≠, но в JavaScript записывается 
+//как a != b.
+*/
+
+// const j = 5;
+// const k = '5'
+// console.log (j != k);
+// console.log (j !== k);
+
+//Один знак равенства a = b означал бы присваивание
+
+/* Все операторы сравнения возвращают значение логического типа:
+
+   true – означает «да», «верно», «истина».
+   false – означает «нет», «неверно», «ложь».
+   
+Сравнение строк => строки сравниваются посимвольно
+
+Алгоритм сравнения двух строк довольно прост:
+
+1. Сначала сравниваются первые символы строк.
+2. Если первый символ первой строки больше (меньше), чем первый символ второй, то 
+первая строка больше (меньше) второй. Сравнение завершено.
+3. Если первые символы равны, то таким же образом сравниваются уже вторые символы 
+строк.
+4. Сравнение продолжается, пока не закончится одна из строк.
+5. Если обе строки заканчиваются одновременно, то они равны. Иначе, большей 
+считается более длинная строка.
+*/
+
+// const str = 'Hello my name is John';
+// const str1 = 'Hello, my name is John';
+// console.log(str == str1);
+// console.log(str != str1);
+
+// const str2 = 'I want to become an engineer';
+// const str3 = 'I want to become an engineer';
+// console.log(str2 == str3);
+// console.log(str2 != str3);
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+
+// let char1 = 'A';
+// const char2 = 'a';
+// console.log(char1 > char2);
+// console.log(char1 == char2);
+// console.log(char1 < char2);
+
+console.log(char1.charCodeAt());
+console.log(char2.charCodeAt());
+
+console.log("3".charCodeAt());
+console.log("1".charCodeAt());
+
+// let newStr = 'John is my friend';
+// let index = 2;
+// console.log(`The charcode of a char at index ${index} will be ${newStr.charCodeAt(index)}`);
+
+
+// Логические операторы
+
+/*
+В JavaScript есть три логических оператора: 
+1. => && (AND)
+2. => || (OR) 
+3. => ! (NOT).
+*/
+
+
+//AND &&
+
+// console.log( true && true ); // true
+// console.log(5 > 2 && 3 == '3');
+// console.log(5 != 2 && 3 == '3');
+// console.log(2 >= 2 && 3 !== '3');
+
+
+// console.log( false && true ); // false
+// console.log(5 < 2 && 3 == '3');
+// console.log(5 == 2 && 3 == '3');
+// console.log(2 > 2 && 3 !== '3');
+
+// console.log( true && false ); // false
+// console.log(5 > 2 && 3 > '3');
+// console.log(5 != 2 && 3 === '3');
+// console.log(2 >= 2 && 3 < '3');
+
+// console.log( false && false ); // false
+// console.log(5 < 2 && 3 > '3');
+// console.log(5 == 2 && 3 === '3');
+// console.log(2 > 2 && 3 < '3');
+
+//OR ||
+// console.log( true || true ); // true
+// console.log(5 < 2 || 3 == '3');
+// console.log( false || true ); // true
+// console.log(5 < 2 || 3 == '3');
+// console.log( true || false ); // true
+// console.log(5 != 2 || 3 === '3');
+// console.log( false || false ); // false
+// console.log(2 > 2 || 3 < '3');
+
+
+//true == 1; false == 0;
+
+// console.log(false == 0);
+//console.log(false == '0');
+//console.log(true == 1);
+// console.log(true === true);
+// console.log(false === false);
+
+// console.log('' == false);
+// console.log('a' == true);
+
+/*
+NOT => !
+Оператор принимает один аргумент и выполняет следующие действия:
+
+Сначала приводит аргумент к логическому типу true/false.
+ Затем возвращает противоположное значение.*/
+
+
+
+// console.log( !true ); // false
+// console.log( !0 ); // true
+//console.log(!1); //false
+
+//Number 1 is always true; 0 is always false
+
+/*
+DOUBLE NOT !! transfer to boolean
+То есть первое НЕ преобразует значение в логическое значение и возвращает обратное, а второе НЕ снова инвертирует его. В конце мы имеем простое преобразование значения в логическое.
+
+*/
+// console.log(!!true ); // true
+// console.log(!!0 ); // false
+// console.log(!!1); //true
+// console.log(!!''); // false
+
+
+// закрепим))
+
+// console.log(12 != 5);
+// console.log(12 % 2 == 0); //проверка на четное
+// console.log(13 % 2 != 0); //проверка на не четное
+// console.log(7 % 2);  //1 
+
+
+//1. Сравниваем с 0 и получаем false, потому, что остаток у нас 1
+//console.log(7 % 2 == 0); //? == 0;
+
+//2. Переводим в булиан
+
+//console.log(!(7 % 2)); //false, почему?
+//потому, что оператором ! переводит в булиан и выдает противоположное значение
+
+//console.log(!!(7 % 2)); //true <= перевело в булиан и выдало нам реальное значение
+//3. True равен 1, а если у нас осталась 1 после применения остатка от деления %, 
+// то значит число не четное.
+/* 
+4. Таким образом когда мы проверяем на четность и не четность, то 7 % 2 без 
+сравнения == 0, */
+
+// console.log(7 % 2);
+
+// будет равен 7 % 2 !== 0
+
+
+// if(7 % 2){   //даем условие, что 7 это не четное число
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+//=====================================
+// let num6 = 7;
+// console.log( num6 % 2 !== 0 && num6 != 5); //true
+
+//=====================================
+// let num7 = 12;
+// console.log(num7 % 2 == false); //false == 0
+
+//=====================================
+// let str = 5;
+// console.log( !(typeof str === 'string') ); //true
+
+//https://www.dummies.com/web-design-development/javascript-operator-precedence/ 
+// JavaScript Operator Precedence
+
+
+//деструктуризация 
+/* Destructuring assignment
+
+Синтаксис деструктурирующего присваивания в выражениях JavaScript позволяет извлекать данные из массивов или объектов 
+// при помощи синтаксиса, подобного объявлению массива или литералов в объекте
+
+*/
+
+// let a = 5;
+// let b = 2;
+// [a, b] = [b, a]
+
+// console.log(a, b);
+
+

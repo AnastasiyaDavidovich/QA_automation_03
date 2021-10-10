@@ -1,0 +1,7 @@
+Two friends shopped at the store. Olya bought 25 eggs, and Yulya bought five times 
+less eggs than Olya. Find if it is true or false that Olya bought more eggs than 
+Yulya.
+
+ let o = 25;
+ let y = 25/5;
+ console.log(o > y);

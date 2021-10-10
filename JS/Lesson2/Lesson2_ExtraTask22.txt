@@ -1,0 +1,16 @@
+Выведите в консоле значение true при следующих переменных:
+ let red = true;
+ let green = false;
+ let black = true;
+ let grey = true;
+
+ Раскрасьте стены дома в (red and green or black and grey and green or grey and 
+red and green). Порядок расставления скобок за Вами.
+
+ let red = "red";
+ let green = "green";
+ let grey = "gray";
+ let black = "black";
+
+console.log(red && (green || black) && grey && (green || grey) && red && !green);
+

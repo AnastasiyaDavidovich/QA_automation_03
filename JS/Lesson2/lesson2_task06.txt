@@ -1,0 +1,7 @@
+Find what char is smaller 'K' or 'a';
+
+ let char1 = 'K';
+ let char2 = 'a';
+ console.log(char1 > char2);
+ console.log(char1 == char2);
+ console.log(char1 < char2);

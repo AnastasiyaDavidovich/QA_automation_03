@@ -1,0 +1,5 @@
+In the variable named day is assigned some number between 1 to 31. Determine in 
+which decade of the month this number belongs  (to the first, second or third).
+
+ let day = 2;
+ console.log(Math.ceil(day / 10));

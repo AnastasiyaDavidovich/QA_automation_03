@@ -1,0 +1,23 @@
+In the string "QA For Everyone" find the code values of the first letters in 
+each word of the string, then comparing these values, find the biggest one. 
+After that, comparing the code values of the last letters of each word, find the 
+smallest one.
+
+ let str = 'QA For Everyone';
+ let f1 = str.charCodeAt(0);
+ let f2 = str.charCodeAt(3);
+ let f3 = str.charCodeAt(7);
+
+ console.log(f1, f2, f3);
+ console.log(f1 > f2);
+ console.log(f2 > f3);
+ console.log(f1 > f3);
+
+ let l1 = str.charCodeAt(1);
+ let l2 = str.charCodeAt(5);
+ let l3 = str.charCodeAt(14);
+
+ console.log(l1, l2, l3);
+ console.log(l1 < l2);
+ console.log(l2 < l3);
+ console.log(l1 < l3);

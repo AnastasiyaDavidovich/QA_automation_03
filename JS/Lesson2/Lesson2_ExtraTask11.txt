@@ -1,0 +1,23 @@
+Declare variables named: apple, banana and kiwi with prices 5, 10 and 7. Declare 
+var sum which is the amount for three fruits one of each type. Declare new 
+variable result - which is equal to your actual amount spent, then check:
+
+If result less than sum - “You forget to buy smth, check once again”;
+
+If result is greater than sum - “You going to pay more for ( subtraction sum from 
+result) dollars, check again“;
+
+If the result is equal to the sum- “Your shopping is done.”
+ 
+
+let apple = 5;
+ let banana = 10;
+ let kiwi = 7;
+ let sum = apple + banana + kiwi;
+ let res = 22;
+ if (res < sum) { 
+     console.log('You forget to buy smth, check once again')}
+   else if (res > sum) {
+     console.log(`You going to pay more for ${res - sum} dollars, check again`)}
+    else if (res == sum) { 
+       console.log ('Your shopping is done.')};
