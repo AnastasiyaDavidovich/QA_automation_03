@@ -1,0 +1,5 @@
+fix the code using ! (NOT); expected result: null
+
+
+ console.log(undefined && null && true );
+ console.log(!undefined && null && true );

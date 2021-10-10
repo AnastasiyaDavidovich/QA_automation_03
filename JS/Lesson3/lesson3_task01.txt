@@ -1,0 +1,5 @@
+fix the code so that the console displays: "undefined"
+
+ let a;
+ let b = 3;
+ console.log('' + a);
