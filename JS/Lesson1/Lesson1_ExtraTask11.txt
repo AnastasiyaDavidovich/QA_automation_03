@@ -1,0 +1,7 @@
+Create two integer variables, one of which is a base and another is a height 
+of a triangle, initialize them with any values. Then calculate a square footage 
+of a triangle.
+
+ let base = 36;
+ let height = 7;
+ console.log(sq = base * height /2);

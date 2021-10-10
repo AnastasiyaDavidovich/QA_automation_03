@@ -1,0 +1,8 @@
+Elon Mask building Falcon 9 rockets. The cost of 1 Falcon 9 equal 
+57 Tesla x model cars. Trip to the moon requires 13 rockets. Can you help 
+Elon to figure out how many cars he needs to sell in order to achieve his goal?
+
+ let costTesla = 1;
+ let costFalcon = costTesla * 57;
+ let costTrip = costFalcon * 13;
+ console.log(costTrip);

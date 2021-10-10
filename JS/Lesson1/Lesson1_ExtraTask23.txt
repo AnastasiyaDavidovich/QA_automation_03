@@ -1,0 +1,6 @@
+First kid uses 5 diapers a day, the second kid uses 8 diapers a day. 
+How many diapers mom should buy to have enough for the next 2 weeks?
+
+ let a = 5;
+ let b = 8;
+ console.log((a + b) * 7 * 2);

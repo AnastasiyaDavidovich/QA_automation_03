@@ -1,0 +1,8 @@
+Create the alert “I wanna be the best Software Engineer”. Create two variables
+of data type String with values:“So what?” and “Work hard for that !!!”. 
+Concatenate two Strings and print in the console.
+
+ alert ('I wanna be the best Software Engineer')
+ let a = 'So what?';
+ let b = 'Work hard for that !!!';
+ console.log(`${a} ${b}`);

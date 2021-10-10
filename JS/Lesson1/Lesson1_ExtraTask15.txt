@@ -1,0 +1,7 @@
+Declare variables: x = “8”; y = 2. Create a variable that takes the result 
+of x divided by y. Print result. 
+
+ let x = 8;
+ let y = 2;
+ let c = x / y;
+ console.log(c);

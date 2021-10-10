@@ -1,0 +1,9 @@
+Create 5 variables, initialize them with integers and find the average of 
+variables. Print the result to console
+
+ let a = 10;
+ let b = 11;
+ let c = 12;
+ let d = 13;
+ let e = 14;
+ console.log((a + b + c + d + e) / 5);

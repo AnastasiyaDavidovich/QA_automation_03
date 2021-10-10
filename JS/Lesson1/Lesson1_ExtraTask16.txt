@@ -1,0 +1,6 @@
+Declare a string name and assign it a value of “Tom”, re-assign to a number 
+ and show in the console type of the name.
+
+ let name = 'Tom';
+ name = +name;
+ console.log(typeof name);

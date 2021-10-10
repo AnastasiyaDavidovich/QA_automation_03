@@ -1,0 +1,9 @@
+Create 3 variables: one String type, one boolean and last one number. 
+Check the type of each variable.
+
+ let a = 'enot';
+ let b = true;
+ let c = 4;
+ console.log(typeof a);
+ console.log(typeof b);
+ console.log(typeof c);

@@ -1,0 +1,7 @@
+You need  to receive Infinity in the console (using Math) and check what type 
+it will be.
+
+ let a = 6;
+ a = 6 / 0;
+ console.log(a);
+ console.log(typeof a);

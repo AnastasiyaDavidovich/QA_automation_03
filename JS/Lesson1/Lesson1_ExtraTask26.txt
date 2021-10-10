@@ -1,0 +1,9 @@
+Create two numbers and assign them random values. Print the result of raising 
+the first number to the power of the second one and add 1 to the result by using 
+increment.
+
+ let a = 3;
+ let b = 2;
+ let c = a ** b;
+ c = ++c
+ console.log(c);

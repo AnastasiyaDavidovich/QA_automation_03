@@ -1,0 +1,8 @@
+Write a code that calculates your BMI (Body Mass Index), 
+where weight=<your_weight_in_kg> and height=<your_height_in_m>. 
+Print the result to the console.
+
+ let weight = 70;
+ let height = 1.60;
+ let BMI = weight / (height ** 2);
+ console.log(`Your BMI = ${BMI}`);

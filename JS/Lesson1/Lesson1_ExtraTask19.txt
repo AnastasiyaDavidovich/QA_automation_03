@@ -1,0 +1,8 @@
+If the car travels 600 km in 3 hours, what is it’s speed?
+Create variables, declare them and console the result.
+
+
+ let km = 600;
+ let h = 3;
+ let speed = km / h;
+ console.log(speed);

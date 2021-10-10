@@ -1,0 +1,9 @@
+Create the variable with the name => sentence  and declare the value "Have a nice 
+day". Count the number of letters in a string. Console the result. What is the 
+last letter in the line? Console the number of letters and the last letter. 
+Console the last letter.
+
+ let sentence = 'Have a nice day';
+ let len = sentence.length;
+ console.log(len);
+ console.log(sentence[sentence.length -1]);

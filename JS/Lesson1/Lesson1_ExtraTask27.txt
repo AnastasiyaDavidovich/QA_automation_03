@@ -1,0 +1,6 @@
+The biggest word in the world is "pneumonoultramicroscopicsilicovolcanoconiosis". 
+Count and print the number of letters. Print the 10th letter of this word.
+
+ let bw = 'pneumonoultramicroscopicsilicovolcanoconiosis';
+ console.log(bw.length);
+ console.log(bw[9]);

@@ -1,0 +1,8 @@
+Write a code that  calculates Volume of the cube with length of side = 7  and 
+calculate length of all sides. Return statement “The volume of the cube = 
+...    with length of 1 side = … and length of all sides …” -> using ` ${}`.
+
+ let s = 7;
+ let v = s ** 3;
+ let p = s * 12;
+ console.log(`The volume of the cube = ${v} with length of 1 side = ${s} and length of all sides ${p}`);

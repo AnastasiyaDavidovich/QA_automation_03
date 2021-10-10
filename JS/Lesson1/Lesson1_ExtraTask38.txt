@@ -1,0 +1,5 @@
+Elon Musk has created a Tesla bot. We should greet it. Create a variable greeting 
+and declare "Welcome to the earth!" and print it out.
+
+ let welcome = 'Welcome to the earth!';
+ console.log(welcome);

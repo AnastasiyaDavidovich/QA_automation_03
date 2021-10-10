@@ -1,0 +1,7 @@
+Create a variable (integer) which is a radius of a circle. 
+Then write a code and calculate a length of circumference (длина окружности) 
+of this circle.
+
+ let rad = 258;
+ let length = 2 * Math.PI * rad;
+ console.log(length);

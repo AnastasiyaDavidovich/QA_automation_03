@@ -1,0 +1,8 @@
+Jane paid $4.16 for a sandwich. She paid $0.95 for a piece of fruit. 
+What is the total amount Jane paid for the sandwich and fruit?
+Print: "Jane paid for her lunch 'total amount' "
+
+ let s = 4.16;
+ let f = 0.95;
+ let t = s + f;
+ console.log(`Jane paid for her lunch $${t}`);

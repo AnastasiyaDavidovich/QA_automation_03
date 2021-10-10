@@ -1,0 +1,6 @@
+Write a code where you will find distance, where speed = 70, time = 12;
+
+ let s = 70;
+ let t = 12;
+ let d = s * t;
+ console.log(d);

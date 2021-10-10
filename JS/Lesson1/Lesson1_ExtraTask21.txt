@@ -1,0 +1,12 @@
+Three boys have three boxes. Each boy has 120lbs of weight. Each box has 2 
+lbs of apples inside. One boy ate half of the box of apples in his box.  
+Question: What is the total lbs boys and apples together? 
+Create the variables and count the amount.
+
+ let w1 = 120;
+ let w2 = 2;
+ w1 = w1 * 3 + w2 / 2;
+ w2 = w2 * 3 - w2 / 2;
+
+ let wt = w1 + w2;
+ console.log(w1, w2, wt);
