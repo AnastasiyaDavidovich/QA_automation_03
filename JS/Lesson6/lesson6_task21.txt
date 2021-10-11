@@ -1,0 +1,10 @@
+https:www.codewars.com/kata/57eae20f5500ad98e50002c5
+
+Simple, remove the spaces from the string, then return the resultant string.
+
+function noSpace(x){
+   for (let i= 0; i< x.length; i++){
+   x= x.replace(' ', '');
+   }
+   return x;
+ }
