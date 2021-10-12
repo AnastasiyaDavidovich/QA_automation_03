@@ -1,0 +1,12 @@
+https:www.codewars.com/kata/56b1f01c247c01db92000076
+
+Given a string, you have to return a string in which each character 
+(case-sensitive) is repeated once.
+
+ function doubleChar(str) {
+   let str1 = '';
+   for (let i= 0; i<str.length; i++){
+     str1 += str[i].repeat(2);
+   }
+   return str1
+ }
