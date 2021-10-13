@@ -1,0 +1,12 @@
+https:www.codewars.com/kata/5841f4fb673ea2a2ae000111
+
+Write a function generateIntegers/generate_integers that accepts a single argument 
+n/$n and generates an array containing the integers from 0 to n/$n inclusive.
+
+ function generateIntegers(n) {
+   let arr = [];
+   for (let i = 0; i<=n; i++){
+     arr.push(i);
+   }
+   return arr;
+ }

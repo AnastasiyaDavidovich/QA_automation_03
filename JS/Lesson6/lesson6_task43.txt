@@ -1,0 +1,18 @@
+https:www.codewars.com/kata/52e9aa89b5acdd26d3000127
+
+
+
+Here we have a function that help us spam our hearty laughter. But is not working! I need you 
+to find out why...
+  function spam(number){
+    TODO: Not returning the expected value.
+    return "hue" * number;
+  }
+
+
+=========
+
+ function spam(number){
+  
+   return "hue".repeat(number);
+ }

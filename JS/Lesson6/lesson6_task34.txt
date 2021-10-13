@@ -1,0 +1,12 @@
+https:www.codewars.com/kata/595970246c9b8fa0a8000086
+
+Fix the helper function they wrote so that it works as intended (i.e. make the first character 
+in the string "word" upper case).
+
+
+ function capitalizeWord(word) {
+  let a =  word[0]
+  a = a.toUpperCase();
+  word=word.slice(1);
+   return a+word;
+ }

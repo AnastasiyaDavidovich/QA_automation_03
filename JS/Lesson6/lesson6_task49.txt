@@ -1,0 +1,18 @@
+https:www.codewars.com/kata/577a98a6ae28071780000989
+
+
+Your task is to make two functions, max and min (maximum and minimum in PHP and Python, 
+maxi and mini in Julia) that take a(n) array/vector of integers list as input and outputs,
+respectively, the largest and lowest number in that array/vector.
+
+
+ var min = function(list){
+     let a =[];
+   a.push(Math.min(...list))
+     return a[0];
+ }
+ var max = function(list){
+    let b = [];
+   b.push(Math.max(...list))
+     return b[0];
+ }
