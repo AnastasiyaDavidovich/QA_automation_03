@@ -1,0 +1,21 @@
+https://www.codewars.com/kata/559590633066759614000063/train/javascript
+
+
+Write a function that returns both the minimum and maximum number of the given list/array.
+Examples
+minMax([1,2,3,4,5])   == [1,5]
+minMax([2334454,5])   == [5, 2334454]
+minMax([1])           == [1, 1]
+Remarks
+All arrays or lists will always have at least one element, so you don't need to check the length. 
+Also, your function will always get an array or a list, you don't have to check for null, 
+undefined or similar.
+
+// function minMax(arr){
+//  let arr1 = [];
+//   let a = Math.min(...arr);
+//   let b = Math.max(...arr);
+//   arr1.push(a,b);
+//   return arr1;
+// }
+

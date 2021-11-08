@@ -1,0 +1,24 @@
+https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
+
+
+Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
+Your task is to process a string with "#" symbols.
+Examples
+"abc#d##c"      ==>  "ac"
+"abc##d######"  ==>  ""
+"#######"       ==>  ""
+""              ==>  ""
+
+// function cleanString(s) {
+//   let a = s.split('');
+//   for (let i= 0; i<a.length; i++){
+//       if (a[i]=='#'&& i!=0){
+//       a.splice(i-1,2);
+//         i = i-2
+//     } else if (a[0]=='#'){
+//       a.splice(0,1);
+//       }
+//   }
+//   s = a.join('');
+//   return s;
+// };

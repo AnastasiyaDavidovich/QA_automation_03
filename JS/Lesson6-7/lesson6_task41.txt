@@ -1,0 +1,21 @@
+https:www.codewars.com/kata/570bcd9715944a2c8e000009
+
+
+Input: floor, The height of the building (floor) Output: a string, The voice of despair
+(When jumping Dutch act)  Example: sc(2) should return "Aa~ Pa! Aa!" It means: Mr. despair 
+jumped from the 2 floor, the voice is "Aa~" He fell on the ground, the voice is "Pa!"
+e did not die immediately, and the final voice was "Aa!"
+
+
+
+ function sc(floor){
+   let a = 'Aa~ ';
+ 
+    if (floor>6){
+      return `${a.repeat(floor-1)}Pa!`;
+    } else if (floor >1) {
+      return `${a.repeat(floor-1)}Pa! Aa!`;
+    } else {
+      return '';
+    }
+ }

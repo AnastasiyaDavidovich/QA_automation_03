@@ -1,0 +1,21 @@
+https://www.codewars.com/kata/57f759bb664021a30300007d/train/javascript
+
+
+Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a 
+to b and vice versa). Leave any incidence of c untouched.
+Example:
+'acb' --> 'bca'
+'aabacbaa' --> 'bbabcabb'
+
+// function switcheroo(x){
+// let a = x.split('');
+//   for (let i = 0; i<a.length; i++){
+//     if (a[i] == 'a'){
+//       a.splice(i,1,"b")
+//     } else if (a[i] == 'b'){
+//       a.splice(i,1,"a")
+//       }
+//   }
+//   x = a.join('');
+//   return x
+// }
