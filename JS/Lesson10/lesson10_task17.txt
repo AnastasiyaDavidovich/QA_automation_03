@@ -1,0 +1,20 @@
+https://www.codewars.com/kata/5892595f190ca40ad0000095/train/javascript
+
+
+ Create a function mispelled(word1, word2):
+ mispelled('versed', 'xersed');  returns true
+ mispelled('versed', 'applb');  returns false
+ mispelled('versed', 'v5rsed');  returns true
+ mispelled('1versed', 'versed');  returns true
+ It checks if the word2 differs from word1 by only one character.
+ This can include an extra char at the end or the beginning of either of words.
+ In the tests that expect true, the mispelled word will always differ only by 
+ one character.
+
+ var mispelled = function(word1, word2){
+   console.log(word1, word2)
+   let arr1 = word1.split('');
+   let arr2 = word2.split('');
+   let sum = arr2.filter(el=>!arr1.includes(el))
+   return sum.length<=1 && Math.abs(word1.length-word2.length)<=1
+ }

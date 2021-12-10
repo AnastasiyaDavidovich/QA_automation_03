@@ -1,0 +1,8 @@
+--------------------------------- Task 2.--------------------
+ 1. Create an array from an existing one 
+    without mutating the first one arr
+
+ const arr = [4,2,8,10];
+ const arr2 = new Array(...arr);
+ console.log(arr, arr2);
+

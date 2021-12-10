@@ -1,0 +1,12 @@
+--------------------------------- Task 4.--------------------
+
+ 1. Create an array with any values
+
+ 2. Create a second array and 
+ asigne to this second arrey a value of a first array without changing the first one
+ print both arrays to the console
+
+ const arr = [2,5,8,1,4,7];
+ const arr2 = new Array(...arr);
+ console.log(arr, arr2);
+

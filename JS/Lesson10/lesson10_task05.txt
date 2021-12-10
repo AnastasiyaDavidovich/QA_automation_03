@@ -1,0 +1,38 @@
+https://www.codewars.com/kata/5630d1747935943168000013/train/javascript
+
+
+ I'm creating a scoreboard on my game website, but I want the score to be displayed 
+ as tally marks instead of Roman numerals. Write a function that translates the numeric 
+ score into tally marks.
+ My tally mark font uses the letters a, b, c, d, e to represent tally marks for 
+ 1, 2, 3, 4, 5, respectively. I want a space and line break ( ) after each completed 
+ tally (5).
+ Assume that the score you receive will be an integer. This function should return 
+ an HTML string that I can insert into my website that represents the correct score.
+
+ var scoreToTally = function(score){
+   let x = score%5;
+   let y = Math.floor(score/5);
+   let z
+   switch (x){
+     case 1:
+       z = 'a';
+       break;
+     case 2:
+       z = 'b';
+       break;
+     case 3:
+       z = 'c';
+       break;
+     case 4:
+       z = 'd';
+       break;
+     case 0:
+       z = 'e';
+       break;
+     }
+  
+   let sum = 'e <br>'.repeat(y);
+   if (x == 0) return `${sum}`
+   else return `${sum}${z}`    
+ }

@@ -1,0 +1,23 @@
+https://www.codewars.com/kata/5977387e131c07082b000098
+
+Complete the function to give the 3 strings str1, str2, str3 the correct values to ensure that 
+each student recieves the right message. 70 is the pass mark, so create a function that uses this 
+grade boundary and returns either:
+"Sorry, you have failed. Better luck next time!"
+or
+"Congratulations, you have passed!"
+Whether they pass or fail, both strings end with this string:
+"Thank you for taking part."
+Things to note:
+The grade boundary is 70 and is inclusive with the score of 70 considered a pass.
+You can use the String .concat() method or any other method you see fit to bring the strings 
+together.
+Scores cannot be lower than 0 and will always be given as a number
+
+
+ function getRes(myScore) {
+ let a = "Thank you for taking part."
+ let b = "Congratulations, you have passed!"
+ let c = "Sorry, you have failed. Better luck next time!"
+ return myScore >= 70 ? `${b} ${a}` : `${c} ${a}`
+ }

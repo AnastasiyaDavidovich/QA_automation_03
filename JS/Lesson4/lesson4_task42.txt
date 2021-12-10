@@ -1,0 +1,47 @@
+https://www.codewars.com/kata/5a6d3bd238f80014a2000187
+
+
+I have a cat and a dog which I got as kitten / puppy.
+I forget when that was, but I do know their current ages as catYears and dogYears.
+Find how long I have owned each of my pets and return as a list [ownedCat, ownedDog]
+NOTES:
+Results are truncated whole numbers of "human" years
+Cat Years
+15 cat years for first year
++9 cat years for second year
++4 cat years for each year after that
+Dog Years
+15 dog years for first year
++9 dog years for second year
++5 dog years for each year after that
+
+
+ var ownedCatAndDog = function(catYears, dogYears) {
+  let dog, cat;
+   let arr = [];  
+  
+   if (catYears > 0 && catYears < 15){
+     cat = 0
+   } else if (catYears >= 15 && catYears < 24){
+     cat = 1;
+   } 
+   else if (catYears >= 24 && catYears < 28){
+     cat = 2;
+   }
+     else {
+     cat = Math.floor((catYears - 24) / 4 + 2)
+   }
+     
+   if (dogYears > 0 && dogYears < 15) {
+     dog = 0;
+   } else if (dogYears >= 15 && dogYears < 24){
+     dog = 1;
+   } else if (dogYears >= 24 && dogYears < 29){
+     dog = 2
+   }
+     else {
+     dog = Math.floor((dogYears - 24) / 5 + 2)
+   }   
+   return [cat, dog];
+ }
+

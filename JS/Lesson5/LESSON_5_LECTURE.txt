@@ -1,0 +1,429 @@
+----------------------------Lesson 5--------------------------
+
+ The JavaScript parser will automatically add a semicolon when, 
+ during the parsing of the source code, 
+ it finds these particular situations:
+
+ 1. when the next line starts with code that breaks the current one 
+(code can spawn on multiple lines)
+ 2. when the next line starts with a }, closing the current block
+ 3. when the end of the source code file is reached
+ 4. when there is a return statement on its own line
+ 5. when there is a break statement on its own line
+ 6. when there is a throw statement on its own line
+ 7. when there is a continue statement on its own line
+
+ex. 1
+ 1 + 1
+ -1 + 1 === 0 ? console.log(0) : console.log(2);
+
+ 
+1 + 1 -1 + 1 === 0 ? console.log(0) : console.log(2);   <= what JS see
+
+
+ex. 2
+ const a = 1
+ const b = 2
+ const c = a + b
+ (a + b).toString()
+ console.log(a, b)
+
+const c = a + b(a + b).toString()  <= what JS see
+
+ const a = 1;
+ const b = 2;
+ const c = a + b;
+ (a + b).toString()
+ console.log(a, b);
+
+ex. 3
+You’d expect the return value of this immediately-invoked function
+to be an object that contains the color property, but it’s not. 
+Instead, it’s undefined, because JavaScript inserts a semicolon after return.
+Instead you should put the opening bracket right after return.
+
+
+ let a = (() => {
+   return                     
+   {
+     result: () => console.log(9)
+   }
+ })();
+ a.result()
+
+ let a = (() => {
+   return {
+     result: () => console.log(9)
+   }
+ })();
+ a.result()
+
+
+ex. 4
+
+ const hey = 'hey'
+ const you = 'hey'
+ const heyYou = hey + ' ' + you           ;
+
+ ['h', 'e', 'y'].forEach((letter) => console.log(letter))
+
+ what JS see
+ => hey + ' ' + you['h', 'e', 'y'].forEach((letter) => console.log(letter)) 
+ 
+etc...
+
+Массив => array
+
+An array is a special type of object designed to work 
+with an ordered set of elements. 
+The array can store elements of any type.
+ ======================================================
+
+--------------Cоздание массива-----------
+
+===================let vs const==============
+ let a = [2];
+ a = a + '';
+ console.log(a);
+
+ a = Number(a)
+ console.log(a);
+
+ const b = [2];
+ b = b + '';
+ console.log(b);
+
+ b = Number(b);
+ console.log(b);
+
+=====================Способы создания:=====================
+
+ const arr = [];            
+ const arr1 = new Array();  
+ Array.of();
+Array.from(Array(10).keys()) or [...Array(10).keys()];
+
+
+ ex.
+ const arr = [1,2,3];
+ const arr2 = arr;
+
+ arr2.push(4);
+ console.log(arr2);  [1, 2, 3, 4]
+ console.log(arr);   [1, 2, 3, 4] first arr was mutated
+
+
+------------- different between => [] vs new Array() + spread operator
+ for not to change the first arr, you need to do =>
+
+ ex. 1
+ const arr = [1,2,3];     [1, 2, 3]
+ const arr2 = new Array(arr);  (...arr)
+ arr2.push(4)
+ console.log(arr);
+ console.log(arr2);
+
+ ex. 2
+ const arr = [1,2,3];     [1, 2, 3]
+ const arr2 = [...arr];  spread operator starting from ES6
+ arr2.push(4)
+ console.log(arr);
+ console.log(arr2);
+
+ex. 2.1
+ const animals = ['pig', 'goat', 'sheep'];
+ const withLion = ['lion', ...animals];  Puts lion At the beginning
+ const withZebra = [...animals, 'zebra'];  Puts zebra at the end
+
+ console.log(animals);  ["pig", "goat", "sheep"]
+ console.log(withLion);  ["lion", "pig", "goat", "sheep"]
+ console.log(withZebra);  ["pig", "goat", "sheep", "zebra"]
+
+ex. 3
+error because of const vs let 
+ const arr = [1,2,3];     [1, 2, 3]
+ arr = []; 
+ console.log(arr);
+ 
+NB => array is like a box, we can change something inside the box
+ but can't change the box with const)
+ That's why we need to create the new array to have 
+ a possible to replace a box
+
+
+-----------------------------Array.of(values)----------
+console.log(Array.of(10, NaN, 4, 5, '6', null));
+
+--------------Array.from(Array(10).keys()) or [...Array(10).keys()]
+fast way to create an array with nums from 0 to ...
+console.log(Array.from(Array(10).keys())) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[...Array(10).keys()] => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+ ======================================================
+значения записываются в квадратные скобки через запятую
+
+ const arr1 = []; пустой массив
+ const arr2 = [1, 2, 3]; 
+ const arr = new Array(1, 2, 3); 
+ const arr = Array.of(1, 2, 3);
+ const arr = [1, 'b', 5, null, '-8', 'hello world', { name: 'Bob' }, arr1, arr2]; 
+ console.log(arr);
+индекс массива начинается с  0,1,2...
+длинна начинается с 1,2,3...
+
+-------------------------- ==; === ------------------
+
+ const arr = [];
+ const arr1 = [];
+
+ console.log(arr == arr1); 
+ console.log(arr > arr1);
+ console.log(arr < arr1);
+
+ ======================================================
+обращение к елементам массива
+
+console.log(arr); выведение массива
+ console.log(arr.length); найти длину (пустой массив)
+ console.log(arr.length); найти длину
+ console.log(arr[1]);  1 обращение к елементу массива через его индекс
+ console.log(arr[4]);  '-8'
+ console.log(arr[arr.length - 1]); последний елемент
+ console.log(arr[arr.length - 1]);  [1, 2, 3] массив в массиве
+ console.log(arr[arr.length - 1][2]);  [3] елементы в массиве в массиве
+
+
+ console.log([1,2,3,4,5].length);  5
+
+============================ method arr.indexOf ==================
+
+ const arr = [1, 2, 3, 'hi'];
+ console.log(arr.indexOf('hi'));
+
+ const arr = [5, 2, 3, 'hi'];
+ console.log(arr.indexOf('by'));
+ console.log(arr.indexOf(1, 8));
+ console.log(arr.indexOf(5, 8));
+
+ ======================================================
+изменение елемента массива
+
+ const arr = [1, 2, 3, 4];
+ console.log(arr);
+ arr[0] = 2;
+ console.log(arr);  [2, 2, 3, 4]
+
+ ======================================================
+ arr.push(el) - добавление елемента в конец 
+
+ arr.push('y', 0, 9);  метод может добавлять любое количество елементов
+ console.log(arr); [2, 2, 3, 4, "y"]
+
+ ======================================================
+ arr.pop() - Удаление последнего элемента:;
+ const arr = [1, 3, '6', 'himn', null]
+ console.log(arr.pop()); возвращает удаленный элемент
+ console.log(arr);
+
+ ======================================================
+ arr.unshift(el) - Добавление элемента в начало массива: 
+метод может добавлять любое количество елементов
+ const arr = [1, 3, '6', 'himn', null]
+ console.log(arr.unshift(0, 2, 5)); возвращает длину нового масива
+ console.log(arr);
+
+ ======================================================
+ shift() - удаляет из массива первый элемент
+
+const arrArr = [0, 1, 2, 3, 4];
+
+ console.log(arrArr.shift()); 4 возвращает удаленный элемент
+ console.log(arrArr.shift()); 3 возвращает удаленный элемент
+
+ console.log(arrArr);
+
+undefined в массиве
+
+ ex.1 
+обращение к не существующему елементу в массиве
+ const arr = [1,'', 2, null, 3, Infinity];
+ console.log(arr[50]);
+
+ ex. 2
+ изменение не существующего
+ const arr = [1,'', 2, null, 3, Infinity];
+ console.log(arr.length); 
+ arr[8] = 10;
+ console.log(arr);
+
+ex. 3 Array(amount of element)
+ console.log(Array(2));         [undefined, undefined]
+ console.log(Array(undefined)); [undefined]
+ console.log(Array());           []
+
+
+ex. 4 
+ const arr = [,,,];
+ console.log(arr);
+ console.log(arr.length);
+
+ ======================================================
+ Слияние
+
+ex 1. Слияние массивов c одним значением
+
+ const arr = [1];
+ const arr2 = [2];
+ const arr3 = ['student'];
+
+ const newArr = arr + arr2 + arr3;
+ console.log(newArr);
+
+ex 2. Операции с елементами разных массивов
+
+ const arr = [1, 2, 3];
+ const arr2 = [4, 'x', 6]; ["g", 'h', 'b']
+
+ const newArr = [];
+
+ let res = arr[0] + arr2[0];  1 + 4
+ let res1 = arr[1] + arr2[1]; 2 + 5
+ let res2 = arr[2] + arr2[2]; 3 + 6
+
+ newArr.push(res, res1, res2);
+ console.log(newArr);
+
+ex 3. Слияние елементов массива
+
+ const arr4 = ["I ", "am a ", "student"];
+ console.log(arr4);
+ console.log(typeof arr4);
+
+ let res = arr4[0] + arr4[1] + arr4[2];
+ console.log(res);
+ console.log(typeof res);
+
+
+ex. 4 Cлияние массивов spread operator
+
+ const arr = [1,2,3];       
+ const arr2 = [4,5,6];
+ arr.push(arr2)
+ console.log(arr);          [1, 2, 3, [4, 5, 6]]
+
+with spread operator
+ const arr = [1,2,3];       
+ const arr2 = [4,5,6];
+ arr.push(...arr2);            (...) <= spread operator
+ console.log(arr);
+
+
+ex. 4 через создание нового массива
+
+ const arr = [1,2,3];       
+ const arr2 = [4,5,6];
+ const arr3 = [...arr, ...arr2];
+ console.log(arr3);
+
+
+ ======================================================
+Деструктурирующее присваивание – это специальный синтаксис, 
+который позволяет нам «распаковать» массивы или объекты 
+в кучу переменных, так как иногда они более удобны. 
+
+ let arr = ["Bill", "Jeff", 1, 2];
+
+ деструктурирующее присваивание
+ firstNamane = arr[0];
+ firstNamane = arr[1];
+
+ let [firstNamane, lastName] = arr;
+ console.log(firstNamane, lastName);
+ console.log(arr);
+
+ let arr = ["Bill", "Jeff", 1, 2];
+
+
+«Деструктурирующее присваивание» не уничтожает массив. 
+Оно вообще ничего не делает с правой частью присваивания, 
+его задача – только скопировать нужные значения в переменные.
+
+ [] = []
+
+ let a = 300;
+ let b = 400;
+
+ [a, b] = [b, a];
+  
+ console.log(a);
+ console.log(b);
+
+ ======================================================
+ Методы
+Math.min();
+
+ const arr = [11, 2, 33];
+
+ console.log(Math.min(...arr));
+ console.log(Math.min(13, 22, 3, 4));
+
+Math.max();
+ const arr = [1, 2, 3];
+ console.log(Math.max(...arr));
+ console.log(Math.max(13, 22, 3, 4));
+
+Math.pow(a, b) возведение в степень 2 ** 5
+ console.log(Math.pow(2, 5)); 
+
+Метод Math.sqrt(a) возвращает квадратный корень числа a.
+console.log(Math.sqrt(12));
+
+
+ ======================================================
+Convert to string
+
+ let a = 4;       
+ let b = null;
+ let c = [1, 2, 3];
+ let d = {};
+ let e = NaN;
+
+ a = a.toString(); 
+ b = b + '';
+ c = String(c); 
+ d = `${d}`;
+ e = JSON.stringify(e);
+
+ console.log(a, b, c, d, e);
+
+
+ ======================================================
+Convert to number
+
+ let a = '144';
+ let b = true;
+ let c = '100'; 
+
+ a = Number(a);
+ b = +b
+ c = c * 1;
+
+ console.log(a, b, c);
+
+
+https:developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+
+ let num = '345.3fcsdc678. vf'
+ let res = parseInt(num);
+ let res2 = parseFloat(num);
+ console.log(res, res2);
+
+
+
+ const arr = [ ,,, ]; 
+
+ console.log(arr.length);
+ console.log(true++);
+
+ arr.shift();  теперь [1, 30, 5, 7, 9, 2, 4,  6];
