@@ -1,0 +1,41 @@
+https://www.codewars.com/kata/57a4d500e298a7952100035d/train/javascript
+
+
+ Complete the function which converts hex number (given as a string) to 
+ a decimal number.
+
+ function hexToDec(hexString){
+   let arr= hexString.split('');
+   let a=1;
+   if (arr[0]=='-'){
+     a = -1;
+     arr.shift();
+   } 
+   arr= arr.reverse();
+   arr = arr.map((el,i)=>16**i*toDec(el))
+   return arr.reduce((sum,el)=>sum+el,0)*a
+ }
+
+ function toDec(symbol){
+   switch (symbol){
+     case 'a':
+     case 'A':
+       return 10;
+     case 'b':
+     case 'B':
+       return 11;
+     case 'c':
+     case 'C':
+       return 12;
+     case 'd':
+     case 'D':
+       return 13;
+     case 'e':
+     case 'E':
+       return 14;
+     case 'f':
+     case 'F':
+       return 15;  
+   }
+   return +symbol;
+ }

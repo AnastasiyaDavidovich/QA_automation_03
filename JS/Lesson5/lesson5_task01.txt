@@ -1,0 +1,20 @@
+----------------------- Task 1.-------------------------
+ const animals = ['pig', 'goat', 'sheep'];
+  1. Add a new element to on zero index in the array
+ animals.unshift('cat');
+ console.log(animals);
+
+  2. Add a new element to end of the array
+
+ animals.push('dog');
+ console.log(animals);
+
+  3. Remove last element of the arrey
+
+ animals.pop()
+ console.log(animals);
+
+  4. Remove the first el of the arrey
+
+ animals.shift();
+ console.log(animals);

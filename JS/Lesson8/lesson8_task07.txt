@@ -1,0 +1,31 @@
+Функция - calculator
+  принимает два числа a, b и операцию operation (+, -, *, /)
+  и возвращает результат выполнения операции над числами или сообщение об
+  ошибке в случае некорректной операции или деления на ноль
+
+ function calculator(a,b,x){
+   switch (x){
+     case '+':
+       return a+b;
+       break;
+     case '-':
+       return a-b;
+       break;
+     case '*':
+       return a*b;
+       break;
+     case '/':
+       if (b==0) return 'error';
+         else return a/b;
+       break;
+     default:
+       return 'error';
+   }
+ }
+
+ console.log(calculator(2,5,'+'));
+ console.log(calculator(2,5,'-'));
+ console.log(calculator(2,5,'*'));
+ console.log(calculator(2,0,'/'));
+ console.log(calculator(2,5,'/'));
+ console.log(calculator(5,5,'j'));

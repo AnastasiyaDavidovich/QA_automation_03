@@ -1,0 +1,178 @@
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
+type Comment {
+  _id: ID!
+  parentId: ID
+  content: String
+  likes: [User]
+  owner: User
+  createdAt: String
+  updatedAt: String
+}
+
+type Company {
+  _id: ID!
+  title: String
+  description: String
+  image: String
+  link: String
+  problems: [Problem]
+}
+
+input CompanyInput {
+  title: String!
+  description: String
+  image: String
+  link: String
+}
+
+type CompanySearch {
+  title: String
+  description: String
+  image: String
+}
+
+type Mutation {
+  userActivate(activationLinkId: String!): String
+  userCreate(email: String!, password: String!): String!
+  userUpdate(userId: ID!, values: UserInput): String
+  userPasswordResetRequest(email: String!): String
+  userPasswordReset(resetId: String!, password: String!): String
+  userRefreshToken: UserAuthData!
+  userResendActivationLink(email: String!): String
+  publicationCreate(values: PublicationInput): String
+  publicationUpdate(pubId: ID!, values: PublicationInput): String
+  publicationLike(pubId: ID!): String
+  publicationDelete(pubId: ID!): String
+  commentCreate(parentId: ID!, content: String!): Comment
+  commentUpdate(commentId: ID!, content: String!): Comment
+  commentLike(commentId: ID!): String
+  commentDelete(commentId: ID!): String
+  companyCreate(data: CompanyInput): ID
+  companyUpdate(companyId: ID!, data: CompanyInput): String
+  companyDelete(companyId: ID!): String
+  problemCreate(data: ProblemInput): String
+  problemUpdate(problemId: ID!, data: ProblemInput): String
+  problemDelete(problemId: ID!): String
+  solutionCreate(problemId: ID!, content: String!): String
+  solutionUpdate(solutionId: ID!, content: String!): String
+  solutionDelete(solutionId: ID!): String
+  solutionLike(solutionId: ID!): String
+}
+
+type Problem {
+  _id: ID!
+  title: String
+  content: String
+  company: Company
+  jobTitle: String
+  solutions: [Solution]
+  owner: User
+}
+
+input ProblemInput {
+  title: String!
+  content: String!
+  company: ID!
+  jobTitle: String!
+  hidden: Boolean
+}
+
+type Publication {
+  _id: ID!
+  title: String
+  description: String
+  content: String
+  image: String
+  owner: User
+  likes: [User]
+  createdAt: String
+  updatedAt: String
+}
+
+input PublicationInput {
+  title: String!
+  description: String
+  content: String
+  image: String
+}
+
+type Query {
+  user(userId: ID!): User
+  users: [User]
+  login(email: String!, password: String!): UserAuthData!
+  logout: Boolean!
+  publication(pubId: ID!): Publication
+  publications(offset: Int, limit: Int): [Publication]
+  comment(commentId: ID!): Comment
+  comments(parentId: ID!, offset: Int, limit: Int): [Comment]
+  company(companyId: ID!): Company
+  companies(offset: Int, limit: Int): [Company]
+  companySearchNew(title: String!): [CompanySearch]
+  problem(problemId: ID!): Problem
+  problems(offset: Int, limit: Int): [Problem]
+  solution(solutionId: ID!): Solution
+  solutions: [Solution]
+}
+
+type Solution {
+  _id: ID!
+  problemId: ID
+  content: String
+  likes: [User]
+  owner: User
+  complexity: Int
+  createdAt: String
+  updatedAt: String
+}
+
+input SolutionCreateInput {
+  problemId: ID!
+  content: String!
+}
+
+type User {
+  _id: ID!
+  email: String
+  firstName: String
+  lastName: String
+  phone: String
+  about: String
+  image: String
+  jobTitle: String
+  level: Int
+  languages: [String]
+  roles: [String]
+  links: [String]
+  starredProblems: [ID]
+  starredPublications: [ID]
+  lastAccess: String
+  createdAt: String
+  updatedAt: String
+  isActivated: Boolean
+  activationLinkId: String
+}
+
+type UserAuthData {
+  accessToken: String
+  user: User
+}
+
+input UserInput {
+  email: String
+  firstName: String
+  lastName: String
+  phone: String
+  about: String
+  image: String
+  jobTitle: String
+  languages: [String]
+  links: [String]
+  starredProblems: [ID]
+  starredPublications: [ID]
+}
+
