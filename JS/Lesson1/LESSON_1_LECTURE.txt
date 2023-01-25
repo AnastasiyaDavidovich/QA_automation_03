@@ -1,0 +1,374 @@
+// LESSON 1 LECTURE
+
+//1974 года Брайана Кернигана "Программирование в C: Учебник",
+//console.log("Hello World!")
+
+
+//console.log('hello world!');
+
+//alert('hello world')
+
+
+// amount of items = 10 apples
+// price = $20/per apple
+
+ 
+// Variables => переменные 
+// Variable declaration => обьявление переменных
+
+//comments 
+
+/* let a = 4; 
+let b = 3;
+*/ 
+
+//=====================================
+// let, var, const <= reserve words 
+// list of reserve words http://www.w3bai.com/ru/js/js_reserved.html 
+//    =    <= declaration sign
+// name of the variable
+// value of the variable and ; at the end of the line
+
+
+//let myName = 'Julia';
+
+
+//===============================================
+//names of the variable in JS
+
+//1. the name should have a meaning 
+// name for user name; age for age, etc
+
+// const name = 'Ban';
+// const customerName = 'Bill';
+
+//2. It should be camelCase style if the name consist of more then one word
+// let userFirstName = 'John';
+// let userAge = 24
+
+//3. Any language but in all world it is common to user english alphabet and language
+// let барабан = "хороший"
+// console.log(барабан);
+
+//4. Numbers but not in the begining 
+
+// const num1 = 1;
+// console.log(num1);
+
+// const 2num = 1; //wrong
+// console.log(2num);
+
+//5. _ sign and $
+// let _num = 5;
+// console.log(_num);
+
+// let $num = 10;
+// console.log($num);
+
+
+//===============================================
+
+//value of next veriables can be change
+// let number = 4;
+// let string = 'Hello Jack';
+
+//value of next veriables can't be change
+// const customerName = 'Bill';
+//const Pi = 3.14;
+//const adultAge = 21;
+
+
+//https://learn.javascript.ru/var 
+
+//can be reesign
+// var a = 5;
+// a = 4
+// console.log(a);
+
+//var is visible outside the scope <= область видимости
+
+//   let a = 20;
+//   const b = 200;
+// {
+//   let a = 10;
+//   const b = 100;
+//   var c = 300;
+// //   console.log(a);
+// //   console.log(b);
+// }
+
+// console.log(a);
+// console.log(b);
+// //console.log(c);
+
+
+
+
+//===============================================
+
+//concatination 
+
+
+
+
+//8 Data types 
+//https://javascript.info/types 
+//8 основных типов данных:
+
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures 
+// There are 8 basic data types in JavaScript.
+
+// number  => for numbers of any kind: integer or floating-point, integers are limited by ±(253-1).
+// bigint => is for integer numbers of arbitrary length.
+// string => for strings. A string may have zero or more characters, there’s no separate single-character type.
+// boolean => for true/false.
+// null => for unknown values – a standalone type that has a single value null.
+// undefined => for unassigned values – a standalone type that has a single value undefined.
+// object => for more complex data structures.
+// symbol => for unique identifiers.
+
+//typeof - check for data type
+
+// "number" - любые числа (целые и дробные) + Infinity, -Infinity и NaN.
+
+// let numPositive = 10;
+// let numNegative = -10; 
+
+// let result = numNegative + numPositive;
+
+// console.log(result);
+// console.log(typeof result);
+
+// let a = 1 / 0;
+
+// console.log(a);         // Infinity
+// console.log(typeof a); // "number"
+
+// let b = -1 / 0;
+// console.log(b);         // Infinity
+// console.log(typeof b); // "number"
+
+// NaN - not a number 
+// NaN means mathematical error. This is the result of an incorrect or undefined mathematical operation, for example:
+
+// console.log('Julia' / 2);         // NaN
+// console.log(typeof('Julia' / 2)); // "number"
+
+
+// Operations on numbers:
+// + find a sum:
+
+// let a = 10; 
+// a = a + 5;  // variable a becomes bigger in 5
+//console.log(a);
+
+
+// //- sign change, subtraction:
+
+
+// a = a - 5;   // variable a becomes smaller in 5
+// a = a * (-1); 
+// console.log(a);
+
+// * multiplication:
+
+//a = a * 4; // variable a becomes bigger on 5
+
+// / division:
+
+// a = a / -2; // значение переменной a уменьшилось в 2 раз
+// console.log(a);
+
+
+// % remainder of division - остаток от деления:
+
+// let b = 10;
+// b = b % 2; 
+// // 10 - 2 = 8 
+// // 8 - 2 = 6 
+// // 6 - 2 = 4 
+// // 4 - 2 = 2 
+// // 2 - 2 = 0
+
+// console.log(b); 
+
+// let c = 9;
+// c = c % 2;
+
+// // // 9 - 2 = 7 
+// // // 7 - 2 = 5 
+// // // 5 - 2 = 3 
+// // // 3 - 2 = 1 
+
+// console.log(c);
+
+// let d = 9
+// d = d % 5
+// // 9 - 5 = 4 
+
+// console.log(d);
+
+//even or odd
+// let a = 6;
+// console.log(a % 2); // even - четный
+
+// let b = 5;
+// console.log(b % 2); // odd - нечетный
+
+
+
+
+// ** exponentiation:
+
+// let a = 10;
+// a = a ** 3;  // значение переменной a возвели в 3-ю степень
+// console.log(a);
+
+
+// ++ increment (увеличение на 1):
+
+// let num = 2;
+// console.log(++num); //первая идет итерация и следующее отображение 
+// console.log(num);
+// let num1 = 2;
+// console.log(num1++); //первое идет отображение и потом итерация
+// console.log(num1);
+
+// let a = 5;
+// a += 25;
+// console.log(a +=3);
+
+
+// -- decrement (уменьшение на 1):
+//let num = 2;
+//console.log(--num); //первая идет итерация и следующее отображение
+//console.log(num--); //первое идет отображение и потом итерация
+//console.log(num);
+
+// let num = 5;
+// console.log(--num); //первая идет итерация и следующее отображение 
+// console.log(num);
+// let num1 = 6;
+// console.log(num1--); //первое идет отображение и потом итерация
+// console.log(num1);
+
+
+
+// operators in js
+
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+//https://learn.javascript.ru/operators 
+
+// Оператор сложения + 
+// let a = 6;
+// let b = 2;
+// console.log(a + b);
+
+// Оператор вычитания - 
+// let a = 6;
+// let b = 2;
+// console.log(a - b);
+
+// Оператор деления / 
+// let a = 6;
+// let b = 2;
+// console.log(a / b);
+
+// Оператор умножения * 
+// let a = 6;
+// let b = 2;
+// console.log(a * b);
+
+// Оператор остаток от деления % 
+// let a = 6;
+// let b = 2;
+// console.log(a % b);
+
+// Оператор возведения в степень ** 
+// let a = 6;
+// let b = 2;
+// console.log(a ** b);
+
+// Операция инкремента ++ 
+// let a = 6;
+// console.log(a++);
+
+// Операция декремента --
+// let a = 6;
+// console.log(a--);
+
+// Унарный минус - 
+// let a = 6;
+// console.log(-a);
+
+// Оператор унарный плюс +
+
+// let a = -6;
+// console.log(+a); //-6
+
+// let a = "6";
+// console.log(+a); //6
+// console.log(typeof a);
+// console.log(typeof +a);
+
+// let a = "2";
+// let b = "3";
+// console.log(a + b);
+// console.log(+a + +b);
+
+// let a = "2";
+// let b = "3";
+// console.log(a - b);
+
+// let a = "2";
+// let b = "3";
+// console.log(a / b);
+
+
+// data type string
+//3 types of quotes 
+
+//string concatenation 
+// let str1 ='Hello';
+// let str2 = "world!"; 
+// let str3 = `${str1} ${str2}`;
+// console.log(str1 + ' ' + str2);
+// console.log(str3);
+
+
+// let num1 = 4;
+// let num2 = 5;
+
+// let res = `${num1 + num2}`
+// console.log(`${num1} + ${num2} = ${res}`);
+
+// let price = 10;
+// let amount = 2;
+// let res = price * amount;
+
+// let str = 'Total price will be ' + res;
+// console.log(str);
+// console.log(`Total price for ${amount} balls will be ${res}`);
+
+//str.length
+// let str = "I like to dance";
+
+// console.log(str.length);
+// console.log(str[0]);     
+// console.log(str.length - 1); 
+// console.log(str[str.length - 1]);
+
+
+// console.log('I like \n icecream');
+// alert('I like icecream');
+
+// let str = 'The trade mark is "Logo"';
+// console.log(str);
+//alert('The trade mark is "Logo"');
+
+
+
+
+
+
+

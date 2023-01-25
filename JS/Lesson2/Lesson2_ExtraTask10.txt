@@ -1,0 +1,9 @@
+Four friends are going to the cinema, if everybody agrees (true). Create vars: 
+Olya - using boolean, Natalya - using number, Jane -   using space and Marina - 
+using string.  => answer - True
+
+ let olga = true;
+ let natalia = 1;
+ let jane = ' ';
+ let marina = '0';
+ console.log(olga && !!natalia && !!jane && !!marina);

@@ -1,0 +1,21 @@
+A palindrome is a word, phrase, number, or sequence of words that reads the same backward as 
+forward. The straight forward solution would be to convert number to string and use the above 
+approach. Some interviewers will not allow to do it. So let’s take a look at what we can do here.
+
+// // isPalNum(545)   -> true
+// // isPalNum(1001)  -> true
+// // isPalNum(13)    -> false
+// // isPalNum(33)    -> true
+
+
+// function isPalNum(num){
+//  let a = num
+//   let remaider;
+//   let newNum = 0;
+//   while (a>0){
+//   remaider= a%10;
+//     a = (a-remaider)/10;
+//     newNum = newNum *10 +remaider;
+//   }
+//   return num == newNum;
+// }

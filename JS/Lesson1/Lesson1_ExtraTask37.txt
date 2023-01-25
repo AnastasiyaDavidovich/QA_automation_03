@@ -1,0 +1,7 @@
+Let’s create a program that will convert our age into days. Create a variable age 
+with your age and create a variable sum to multiply 365, Print console. Note 
+ignore leap years, expect only positive integers.
+
+ let age = 33;
+ let age1 = age * 365;
+ console.log(age1);

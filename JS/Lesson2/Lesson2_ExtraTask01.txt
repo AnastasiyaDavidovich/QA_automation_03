@@ -1,0 +1,24 @@
+You were paid 5000 in January, and in February you were paid 20% more. 
+Count your total payment, print in console the type of the total payment, 
+and print in console concatenation of string "I have " and the total 
+payment. 
+You want to buy a new car. Create a variable with the car cost 
+20000. Then create a string with the name “question” and value 
+"Can I buy Nissan for ". Create a variable of Boolean data type with 
+value where you compare your total pay and the car cost. Print in console 
+the sentence using concatenation of your variables  in order to have 
+output in console you will see “Can I buy Nissan for my payment for 
+two months ?”). The last step – print in console your comparison variable.
+
+
+ let j = 5000;
+ let f = j * 1.2;
+ let t = j + f;
+ console.log(typeof (t));
+ console.log(`I have ${t}`);
+
+ let cC = 20000;
+ let question = "Can I buy Nissan for ";
+ let ans = (t > cC);
+ console.log(`Can I buy Nissan for my payment for two months ? ${ans}`);
+ console.log(ans);

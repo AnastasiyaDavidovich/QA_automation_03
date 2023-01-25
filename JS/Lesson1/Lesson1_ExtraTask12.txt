@@ -1,0 +1,6 @@
+Refer to the last element of a string using a math operation where 
+str = “Never give up”;
+
+
+ let str = 'Never give up';
+ console.log(str[str.length - 1]);

@@ -1,0 +1,25 @@
+Bob and Bill have planned their trip to Hawaii. They are really busy with work and 
+need to find  the best way to plan their trip.
+They have 4 options to fly, but only 1 can be good for both of them:
+  Calendar hours to fly:
+  1. Monday - 10am;
+  2. Tuesday - 12pm;
+  3. Friday - 6pm;
+  4. Sunday - 1pm;
+   
+  Case 1: Bob can fly Monday any time, and Tuesday after 3pm. And Friday till 
+5pm, and Sunday till 12.30pm.   Bill can fly Monday after 4pm, and Tuesday anytime.
+And Friday after 9am, and Sunday after 11am.
+  
+ Case 2: Bob can fly only Friday after 3pm, and Sunday any time; Bill can fly 
+Monday after 10:01am, or Tuesday after 11:55pm. Or Friday till afternoon, and 
+Sunday he is free all day. Find out which case is true or false, to know when they both can plan 
+ their trip together.
+
+
+  case 1:
+ console.log((true || false || false || false) && (false || true || true || true));
+
+
+  case 2:
+ console.log((false || false ||true || true) && (false || true || false || false));

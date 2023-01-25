@@ -1,0 +1,8 @@
+ Write a code where you will find a perimeter of a square, where side a = 10,
+side b = 12; 
+
+
+
+ let a = 10;
+ let b = 12;
+ console.log(per = (a + b) * 2);

@@ -1,0 +1,4 @@
+Chack a number 66 is odd or even;
+
+ let a = 66;
+ console.log(a % 2 == 0);

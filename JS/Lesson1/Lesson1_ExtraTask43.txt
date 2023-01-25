@@ -1,0 +1,9 @@
+To burn calories for 1 chocolate Marusya needs to run 2km,and to burn calories 
+for 1 ice cream 5km. How far she has to run if she breaks her diet by eating 2,5 
+chocolates and 3 ice creams. Print the distance in the console.
+
+ let ch = 2.5;
+ let ice = 3;
+ let disCh = ch * 2;
+ let disI = ice * 5;
+ console.log(totalDis = disCh + disI);

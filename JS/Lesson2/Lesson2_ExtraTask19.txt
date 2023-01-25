@@ -1,0 +1,24 @@
+Create variables for the names with age: Tom, Sam, Jack, Ted. Tom is 16, each 
+friend is 2 years older, starting from Tom in order. 
+  a)Count the age of each person;
+  b) Insert the names with the age to the string, using concatenation and ${}: 
+“Tom is - 16 years old, Sam is - …. years old, Jack is … years old, Ted is … 
+years old. And the total of our age is ….years old”. 
+  c) Find out what is the Unicode Value of the 1sr letter of the name, and add 
+the total to the string: “The total of the Unicode values of the 1st letter of 
+the all names is ….!”.
+
+ let tom = 16;
+ let sam = tom + 2;
+ let jack = sam + 2;
+ let ted = jack + 2;
+ let tot = tom + sam + jack + ted;
+ console.log(`Tom is ${tom} years old, Sam is ${sam} years old, Jack is ${jack} years old, Ted is ${ted} years old. And the total of our age is ${tot} years old`);
+
+ let str = `Tom is ${tom} years old, Sam is ${sam} years old, Jack is ${jack} years old, Ted is ${ted} years old. And the total of our age is ${tot} years old`
+ let ind1 = str.charCodeAt(0);
+ let ind2 = str.charCodeAt(20);
+ let ind3 = str.charCodeAt(41);
+ let ind4 = str.charCodeAt(62);
+ let indT = ind1 + ind2 + ind3 + ind4;
+ console.log(`The total of the Unicode values of the 1st letter of the all names is ${indT}!`);

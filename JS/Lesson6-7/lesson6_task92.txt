@@ -1,0 +1,20 @@
+https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9
+
+
+Given an array of positive integers (the weights of the people), return a new 
+array/tuple of two integers, where the first one is the total weight of team 1, and 
+the second one is the total weight of team 2.
+
+// function rowWeights(array){
+//  let a = 0;
+//   let b= 0;
+//   let arr = [];
+//   for (let i =0; i<array.length; i+=2){
+//     a+=array[i];
+//   }
+//   for (let i=1; i<array.length; i+=2){
+//     b+=array[i];
+//   }
+//   arr.push(a,b);
+//   return arr;
+// }

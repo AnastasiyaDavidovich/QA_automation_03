@@ -1,0 +1,6 @@
+Create a variable, initialize it with a positive integer. 
+Make it negative and print the result to console 
+
+ let a = 21;
+ a = -a;
+ console.log(a);

@@ -1,0 +1,6 @@
+Create a String with a value "208". Convert String to number. Find the remainder 
+after division by "5". Output the result to the console.
+
+ let str = '208';
+ str = +str;
+ console.log(str % 5);

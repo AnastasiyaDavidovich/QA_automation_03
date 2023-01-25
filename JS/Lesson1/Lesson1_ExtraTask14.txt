@@ -1,0 +1,8 @@
+Declare empty variables a that equals true and b equals to 5.
+Declare variable result and make it equals to sum of a and b. 
+Print the result
+
+ let a = true;
+ let = b = 5;
+ let res = a + b;
+ console.log(res);

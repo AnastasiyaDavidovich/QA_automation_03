@@ -1,0 +1,10 @@
+Дана строка: "Children can have different hobbies", вычислить длину этой строки, 
+найти элемент под первым и последним индексом, вывести результаты в консоль. 
+
+ let str = 'Children can have different hobbies';
+ let len = str.length;
+ let l1 = str[0];
+ let l2 = str[str.length - 1];
+ console.log(len);
+ console.log(l1);
+ console.log(l2);

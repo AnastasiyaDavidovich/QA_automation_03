@@ -1,0 +1,4 @@
+Transfer 7 to boolean 
+
+ let a = 7;
+ console.log(!!a);

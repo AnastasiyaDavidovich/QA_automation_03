@@ -1,0 +1,10 @@
+Kate is 25 years old. Her mother is 2.5 times older. Find how old her mother is. 
+Make a full sentence " My mother is 2.5 times older than me and she is 55 years 
+old" and calculate the length of this sentence.
+
+ let age1 = 25;
+ let age2 = age1 * 2.5;
+ console.log(age2);
+
+ let str = 'My mother is 2.5 times older than me and she is 55 years old';
+ console.log(str.length);

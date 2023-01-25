@@ -1,0 +1,25 @@
+Последовательность Фибоначчи: 0,1,1,2,3,5,8,13,21,34,...
+Создайте функцию, которая получает число n и возвращает последовательность n чисел Фибоначчи
+
+
+
+// function fibonachi (n){
+//   //let fib = [0,1];
+//   let fib1='0,1';
+//   let a = 0;
+//   let b = 1;
+//   for (let i =1; i<=n-2; i++){
+//     //fib.push(fib[i]+fib[i-1]);
+//     let x = a+b;
+//     fib1 = fib1 + ',' + x;
+//     a=b;
+//     b=x
+       
+//   }
+//  // return fib
+//   return fib1;
+// }
+// console.log(fibonachi (3));
+// console.log(fibonachi (10));
+// console.log(fibonachi (5));
+// console.log(fibonachi (8));

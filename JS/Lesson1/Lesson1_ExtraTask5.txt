@@ -1,0 +1,10 @@
+Create two variables with values(5, 7). The first with data type Integer 
+and the second with a String data type . Raise the number 5 to the power of 2, 
+save as a result. 
+Print in the console the sum of the result and the second variable.
+
+ let a = 5;
+ let b = '7';
+ a = a ** 2;
+ b = +b;
+ console.log(a + b);

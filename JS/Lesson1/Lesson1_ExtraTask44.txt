@@ -1,0 +1,6 @@
+Print in the console “x” from the word “supercalifragilisticexpialidocious” 
+through enrichment to the index in this word and what is the length of this word.
+
+ let str = 'supercalifragilisticexpialidocious';
+ console.log(str[21]);
+ console.log(str.length);

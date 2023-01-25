@@ -1,0 +1,6 @@
+Вывести в консоле числовое значение (математический вес) индекса 5 во фразе 
+«We are the champions”.
+
+
+ let str = 'We are the champions';
+ console.log(str.charCodeAt(5));

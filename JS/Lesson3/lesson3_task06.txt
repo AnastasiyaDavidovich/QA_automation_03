@@ -1,0 +1,4 @@
+fix the code using parentheses, expected result: false
+
+
+console.log(true || undefined === null && 0 > 1 );

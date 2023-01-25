@@ -1,0 +1,34 @@
+Solve a task with logical operators in such a way as on example:
+
+Example:
+ let chocolate = true;
+ let strawberry = false;
+ let apple = true;
+ let caramel = true;
+
+ case 1: I want ((strawberry and chocolate) or apple) or no caramel
+ let icecream = ((strawberry && chocolate) || apple) || !caramel;
+ console.log("case 1: " + icecream);
+
+ case 2: I want (strawberry and (chocolate or apple)) or without caramel
+ icecream = (strawberry && (chocolate || apple)) || !caramel;
+ console.log("case 2: " + icecream);
+
+TASKS:
+case 1: (The new building has 9 windows or a door) and the guest name is John or the address has a data type of a boolean 
+=> the result is true
+case 2: The new building has 8 windows or (no door and the guest name is John) or the address has a data type of a number 
+=> the result is true
+
+ let windows = 8;
+ let door = true;
+ let guest = 'John';
+ let address = 5;
+
+case 1:
+ let bild1 = (windows == 9 || door == true) && guest == 'John' || typeof (adress) == 'boolen';
+ console.log(bild1);
+
+case 2:
+ let bild2 = windows == 8 || (door == false && guest == 'John') || typeof (adress) == 'number'
+ console.log(bild2);

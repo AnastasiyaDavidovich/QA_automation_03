@@ -1,0 +1,9 @@
+The runner's jogging time is 30 minutes, distance 5,2 km. Find the runner’s speed in m/s and display 
+the result on the console.
+
+ let t = 30;
+ t = t * 60;
+ let d = 5.2;
+ d = d * 1000;
+ let s = d / t;
+ console.log(s);

@@ -1,0 +1,9 @@
+Given three numbers: d = 1.1; e = -1.1; f = 0. Use comparison operators to print 
+to the console if these numbers are not positive?
+
+ let d = 1.1;
+ let e = -1.1;
+ let f = 0;
+
+ console.log((d <= 0), (e <= 0), (f <= 0));
+

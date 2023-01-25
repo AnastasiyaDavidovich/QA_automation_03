@@ -1,0 +1,26 @@
+Create the variable with the name name, and declare the value - any name of your 
+choise; 
+Create the variable with the name age, and declare the any value from the range 
+[1; 80];
+Create the variables with the names: isChild; isTeenager; isAdult. 
+These variables should contain boolean values, the age must be taken into account: 
+child: [1; 10] ,  teenager: [11; 18] ,  adult: 19 and over.
+
+print 3 phrases to the console, whether the person is a child, or a teenager, or 
+an adult, according this form: "Is Anna a child? false"
+
+ let name = 'Nastya';
+ let age = 33;
+ let isChild = (age >= 1 && age <= 10);
+  isChild >= 1 && isChild <= 10;
+ let isTeenager = (age >= 11 && age <= 18);
+  isTeenager >= 11 && isTeenager <= 18;
+ let isAdult = (age >= 19 && age <= 80);
+  isAdult >= 19 && isAdult <= 80;
+
+
+ console.log(`Is ${name} a child? ${isChild}`);
+ console.log(`Is ${name} a teenager? ${isTeenager}`);
+ console.log(`Is ${name} a adult? ${isAdult}`);
+
+ console.log(isChild, isTeenager, isAdult);

@@ -1,0 +1,9 @@
+ Create a string with a name userAge and a value “21” and change the data 
+type from a string to a number and add 10 to that number.  
+
+
+
+ let userAge = '21';
+ console.log(userAge = +userAge);
+ userAge = userAge + 10;
+ console.log(userAge);

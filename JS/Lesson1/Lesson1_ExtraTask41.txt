@@ -1,0 +1,11 @@
+Напишите скрипт, который считает количество секунд в часе, в сутках, в месяце. 
+Выведите результат в консоль.
+
+ let secH = 60 * 60;
+ let secD = secH * 24;
+ let day = 28;
+ let secM = secD * day;
+
+ console.log(secH);
+ console.log(secD);
+ console.log(secM);

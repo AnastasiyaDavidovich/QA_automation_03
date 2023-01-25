@@ -1,0 +1,7 @@
+Create two strings with your first name and last name. Print in console 
+lengths of these strings.
+
+ let fName = 'Nastya';
+ let lName = 'Davidovich';
+ console.log(fName.length);
+ console.log(lName.length);

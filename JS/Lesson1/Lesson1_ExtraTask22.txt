@@ -1,0 +1,9 @@
+Please concatenate “I”, “ and my friends”, “ love QA_FOR_EVERYONE”, 
+to have only one full string line. And count the length of the string.      
+
+ let a = 'I';
+ let b = ' and my friends';
+ let c = ' love QA_FOR_EVERYONE';
+ let res = `${a}${b}${c}`
+ console.log(res);
+ console.log(res.length);

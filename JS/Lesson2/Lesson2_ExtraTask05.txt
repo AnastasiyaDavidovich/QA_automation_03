@@ -1,0 +1,11 @@
+Приведите строки в числа, а затем преобразуйте в boolean type, при a = '23', 
+b = '43';
+
+ let a = '23';
+ let b = '43';
+ a = +a;
+ b = +b;
+ console.log(a, b);
+ a = !!a;
+ b = !!b;
+ console.log(a, b);

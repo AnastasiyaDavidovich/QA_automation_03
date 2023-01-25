@@ -1,0 +1,9 @@
+Create variables "a"  with value 15 and "b" with value 18. Assign the value of 
+the doubled sum of the variables "a" and "b" to the variable "x" and print the 
+result to console.
+
+
+ let a = 15;
+ let b = 18;
+ let x = 2 * (a + b);
+ console.log(x);

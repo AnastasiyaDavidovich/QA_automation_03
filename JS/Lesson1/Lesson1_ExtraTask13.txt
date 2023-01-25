@@ -1,0 +1,6 @@
+Determine the remainder of the division of the next variables: a = 11; b = 4. 
+ What is the remainder of variable a?
+
+ let a = 11;
+ let b = 4;
+ console.log(a % b);

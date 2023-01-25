@@ -1,0 +1,8 @@
+Write a code that picks up the height and base of the triangle and calculate its 
+areas. The area of a triangle is: (base * height) // 2. Don't forget to print 
+the result.
+
+ let b = 12;
+ let h = 8;
+ let ar = b * h / 2;
+ console.log(ar);

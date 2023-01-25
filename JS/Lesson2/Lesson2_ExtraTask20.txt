@@ -1,0 +1,22 @@
+We have string let str = '124, 45, 8';     
+Show in Console if numbers in string are even: true/false.
+Expected to see:
+`Number 1: [show number] is even: true;
+ number 2: [show number] is even: false;
+ number 3: [show number] is  even: true’
+
+ let str = '124, 45, 8';
+ let n1 = str[0] + str[1] + str[2];
+ n1 = +n1;
+ let n2 = str[5] + str[6];
+ n2 = +n2
+ let n3 = str[str.length - 1];
+ n3 = +n3;
+ let e1 = n1 % 2 == 0;
+ let e2 = n2 % 2 == 0;
+ let e3 = n3 % 2 == 0;
+
+ console.log(`Number 1: ${n1} is even: ${e1}`);
+ console.log(`Number 2: ${n2} is even: ${e2}`);
+ console.log(`Number 3: ${n3} is even: ${e3}`);
+  

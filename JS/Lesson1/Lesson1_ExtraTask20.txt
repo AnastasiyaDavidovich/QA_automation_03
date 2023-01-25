@@ -1,0 +1,6 @@
+Create one variable with name firstName, second variable with lastName. 
+And console result as the email: firstName.lastName@gmail.com
+
+ let firstName = 'Anastasiya';
+ let lastName = 'Davidovich';
+ console.log(`${firstName}.${lastName}@gmail.com`);

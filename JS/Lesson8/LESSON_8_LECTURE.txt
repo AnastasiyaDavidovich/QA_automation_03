@@ -1,0 +1,477 @@
+//===================Lesson 8===================
+//===================function====================
+
+
+//simple function ex.
+//console.log("Hello World!")
+
+//======================== function declaration =>
+
+// function name(param, param...) {
+//    statements
+// }
+
+//}; <= не ставится
+
+//1. Слово function, 
+//2. Имя функции
+//3. Список аргументов в круглых скобках через запятую 
+//4. Код функции,также называемый «телом функции», внутри фигурных скобок.
+
+
+//  ====================> выполнение(вызов)/function execution 
+// showMessage();     
+// showMessage();
+
+// sum();
+// sum();
+// sum();
+
+// function showMessage() {
+//   console.log("Hello World!")
+// }
+
+
+// function sum() {
+//   const a = 2;
+//   const b = 4;
+//   console.log(a + b)
+// }
+
+//когда код читается, то при такой декларации первыми он будет "искать" функции
+
+//=======================================================
+// помещение обьявленной функция в функцию
+
+// function showMessage() {
+//   console.log('Hello')
+// }
+
+// function sum() {
+//   const a = 2;
+//   const b = 4;
+  
+//   console.log(a + b)
+//   showMessage()
+// }
+
+// sum();
+
+//=======================================================
+// обьявление функции в функции
+
+// function sum() {
+//   const a = 2;
+//   const b = 4;
+//   console.log(a + b);
+    
+//   function showMessage() {
+//     console.log('Hello')
+//   }
+//   showMessage(); 
+  
+// }
+// sum();
+
+
+//showMessage(); => error NOT VISIBLE OUTSIDE
+
+
+//pract. 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
+
+// function unixTime(){
+//   let time = Math.floor(new Date().getTime());
+//   console.log(time);
+// }
+// unixTime();
+
+// function mathRandom(){
+//   const min = 10;
+//   const max = 20;
+  
+//   let random = Math.floor(min + Math.random() * (max + 1 - min));
+//   console.log(random);
+// }
+// mathRandom()
+
+
+// mathRandom; 
+// console.log(mathRandom);
+
+//===== function can be declaire only one time => what dors it mean?
+
+
+// function mathRandom(){
+//   console.log("random num 123");
+// }
+// mathRandom()
+
+// only the last declaration works
+
+
+
+
+//================= void function =====> 
+// ничего не возвращает/нет return, 
+// но выполняет вложенные в тело функции действия
+
+// function showMessage() {
+//   console.log("Hello World!")
+// }
+// showMessage();
+// console.log(showMessage());
+
+//==========================переменные в функциях=====================
+//====================================================================
+
+// Переменные, объявленные внутри функции, видны только внутри этой функции 
+
+
+// function showMessage() {
+//   let name = 'Julia';
+//   return 'Hi' + name;
+// }
+// console.log(showMessage());
+// console.log(name);
+
+//==================================
+//У функции есть доступ к внешним переменным и может изменять их значение
+
+// let name = 'Julia';
+
+// function showMessage() {
+//   return name += ' Hi';
+// }
+// console.log(showMessage());
+// console.log(name);
+
+
+//=====================
+//если переменная вызвана до вызова функции, то она не меняется
+
+// let name = 'Julia';
+// function showMessage() {
+//   name = 'Bill';
+//   return name;
+// }
+
+// console.log(name);
+// console.log(showMessage());
+
+// console.log(showMessage());
+// console.log(name);
+
+//=======================
+//Одноименная переменная будет выполнятся внутри функции, 
+// внешняя будет проигнорированна
+
+// let name = 'Julia';
+
+// function showMessage() {
+//   let name = 'Bill';
+//   return name;
+// }
+// console.log(showMessage());
+// console.log(name);
+
+//execution vs veriable
+
+//mathRandom();
+
+//   let min = 10;
+//   let max = 20;
+
+// function mathRandom(){
+//   let random = Math.floor(min + Math.random() * (max + 1 - min));
+//   console.log(random);
+// }
+// mathRandom();
+
+//    min = 100;
+//    max = 200;
+// mathRandom();
+
+//==================================================
+//counter - счетчик
+
+//10
+// function counter(){
+//   let c = 9
+//   c++;
+//   console.log(c);
+// }
+// counter();
+// counter();
+// counter();
+
+
+//10,11,12
+// let c = 9
+// function counter(){
+
+//   c++;
+//   console.log(c);
+// }
+// counter();
+// counter();
+
+//============================== arguments(, , , ,...) ==============================
+
+//==========================
+//1. without args inside()
+//==========================
+
+// function sum() {
+//   const a = 2;
+//   const b = 4;  
+//   console.log(a + b)
+// }
+// sum();
+
+//==========================
+//2.args inside()
+//==========================
+
+// sum1(2, 4);
+
+// function sum1(x, y) { 
+//   console.log(x + y)
+// }
+
+//==========================
+//3.more/less args inside()
+//==========================
+
+// function sum2(x, y) { 
+//   console.log(x + y)
+// }
+// sum2(2, 4, 5, 6);
+// sum2(2);
+
+//==========================
+//4.assign args inside()
+//==========================
+
+// function sum2(x = 0, y = 2) { 
+//   console.log(x + y)
+// }
+// sum2(2);
+
+//==========================
+//if we do not know the amount of arguments
+//1.
+//arguments
+//==========================
+
+// function showArg() { 
+//   console.log(arguments);
+  
+//   let sum = 0;
+//   for(let i = 0; i < arguments.length; i++){
+//     sum += arguments[i];
+//   }
+//   console.log(sum);
+// }
+// showArg(10, 10, 10, 10, 10);
+
+//==========================
+//args
+//2.
+//==========================
+
+// function showArg(...args) { 
+  
+//   console.log(args);
+  
+//   let sum = args.reduce((accum, item) => accum += item);
+  
+//   console.log(sum);
+// }
+// showArg(10, 10, 10, 10, 10);
+
+
+// ============= callback function ==================
+//func as an argument
+
+//ex.1
+//find min in arr
+
+// const a = [2, 19, 17, 0, -7, -9];
+
+// function min(arrArg){
+//   let minNum = arrArg[0];
+//   for(let i = 0; i < arrArg.length; i++){
+//     if(minNum > arrArg[i]) minNum = arrArg[i];
+//   }  
+//   //console.log(minNum);
+//   return minNum;
+// }
+// min(a);
+
+// //do not push min in a new arr
+
+// function delMin(arr, min){        //min is our func as arg
+//   const a2 = [];
+//   const delNum = min(arr);         //delNum equal result of funct execution
+  
+//   for(let i of arr){
+//     if(i !== delNum){
+//       a2.push(i)
+//     }
+//   }
+//   console.log(min(arr));  //-9
+//   console.log(a2);
+// }
+// delMin(a, min)
+
+//ex.2
+
+// function correctPolishLetters (string) {
+//    return string.replace(/[0, 1, 2]/g, 'o, l, z');    
+// }
+// console.log(correctPolishLetters ('I 10ve my 200'));
+
+// function swap(char){
+//   let str = '0, 1, 2';
+//   let i = str.indexOf(char);
+//   let str2 = 'o, l, z';
+//  return str2[i];
+//  }
+
+
+
+//============================= return ===================
+//======================================================================
+
+//По умолчанию функции возвращают undefined. 
+//Чтобы вернуть другое значение, функция должна содержать инструкцию return, 
+// которая указывает, какое значение возвращать
+
+//ex. undefined
+// function sum(a, b){
+//    a + b;
+// }
+//sum(4, 5);
+//console.log(sum(4, 5));
+
+//ex. use func inside other + sum(5, 5)
+
+// function fun(){
+//   console.log(2);
+// }
+// fun();
+
+// console.log(fun());
+
+
+//ex. перерывание функций через return
+
+// function indexOfNum(arr, num){
+//   for(let i = 0; i < arr.length; i++){
+//     if(arr[i] === num) return i;
+//   }
+//   return -1;
+// }
+// let result = indexOfNum([11, 22, 33, 44, 55], 22);
+// console.log(`index of a number is ${result}`);
+
+
+//ex. return & ();
+
+// function example(){
+//   let a = 5;
+//   //перенос - ошибка
+//   //return 
+//   //a;
+//   return a;
+  
+// }
+// console.log(example());
+
+//ex. return use a func
+
+// function sumFunc(arr){
+//   let sum = 0;
+//   for(let i = 0; i < arr.length; i++){
+//     sum += arr[i];
+//   }
+//   return sum;
+// }
+
+// const arr = [[3, 4, 5], [9], [6, 7, 8], [4, 5, 7], [2, 2]];
+
+// const arrFiltered = arr.filter( function(item){
+//   return (sumFunc(item) % 2 === 0);
+// });
+// console.log(arrFiltered);
+
+// //ex. return function 
+
+// function funcReturn(){
+//   return sumFunc;
+// }
+// let res = funcReturn();
+// console.log(res([10, 20, 30]));
+
+//=================== Arrow function=============================
+
+// function arrowSum(a, b){
+//   return a + b;
+// }
+// console.log(arrowSum(2, 2));
+
+
+//some Arrow func rules 
+
+//1.=============== with return and {} 
+
+// const arrowSum = (a, b) => {
+//   return a + b;
+// }
+// console.log(arrowSum(2, 2));
+
+//2.=============== no need return and {}
+
+// const arrowSum = (a, b) => a + b; 
+// console.log(arrowSum(2, 2.33));
+
+//3. if only 1 arg no need ()
+
+// const arrowSum = a => Math.pow(a, 2);
+// console.log(arrowSum(2));
+
+//========================================
+//Вы можете использовать функцию до того, как вы её объявили
+
+// sum(4, 5);
+
+// function sum(a, b){
+//   return console.log(a + b);
+// }
+
+//========================================
+//4. Вы НЕ можете использовать стрелочную функцию до того, 
+// как вы её объявили
+
+// sum(4, 5);
+// const sum = (a, b) => console.log(a + b);
+
+//5. {} нужны если больше одного действия внутри 
+
+// const arr = [1, 2, 3, 4, 5];
+
+//filter 
+
+// const filterArr = arr.map(function(item){
+      
+//       if(item % 2 === 0)
+//       return item + 1; 
+//       else return item * 2;
+// })
+// console.log(filterArr);
+
+
+// const filterArr1 = 
+//       arr.map((item, index) => index % 2 === 0 ? item + 2 : item * 2);
+// console.log(filterArr1);

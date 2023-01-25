@@ -1,0 +1,14 @@
+Создайте переменные со значениями: null; undefined; "word"; ''; NaN; (NaN + ''); 
+('a' - 7) .
+
+Проверьте, являются ли они «не числом»  ->  isNaN();
+Проверьте те же данные, равны ли они NaN ?
+
+ let a = null;
+ let b = undefined;
+ let c = "word";
+ let d = '';
+ let e = NaN;
+
+ console.log(isNaN(a), isNaN(b), isNaN(c), isNaN(d), isNaN(e));
+ console.log((a == NaN), (b == NaN), (c == NaN), (d == NaN), (e == NaN));

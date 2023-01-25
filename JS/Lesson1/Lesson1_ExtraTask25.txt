@@ -1,0 +1,14 @@
+Create a variable with a name “word”, assign it with value “VOLUME”. 
+By using modulus find the remainder  of  2 divisions between 90 and 8; 11 and 2. 
+Print string that consists of an index of variable “word” equals first division, 
+then second division, next - first char of the string and the last index. 
+Divide indexes with new lines (\n). 
+
+ let world = 'VOLUME';
+ let a = 90 % 8;
+ let b = 11 % 2;
+ let lA = world[a];
+ let lB = world[b];
+ console.log(lA);
+ console.log(lB);
+ console.log(`${lA}\n ${lB}\n ${world[0]}\n ${world[world.length - 1]}`);

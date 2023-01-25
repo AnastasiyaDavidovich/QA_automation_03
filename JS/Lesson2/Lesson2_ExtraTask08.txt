@@ -1,0 +1,8 @@
+First you have to assign  two numbers (any numbers of your choice) and implement: 
+If one of the numbers is even and the other is odd you need to print out - true, 
+Otherwise you need to print out - false
+
+ let a = 15;
+ let b = 89;
+
+ console.log((a % 2 == 0) && (b % 2 == 1));

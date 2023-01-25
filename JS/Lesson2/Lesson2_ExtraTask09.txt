@@ -1,0 +1,7 @@
+Create 2 vars. Assign the same float number to both of them : 0.2. 
+Multiply these 2 values. Check if the result of multiplying which we get in the 
+js equals to the real value (in this case equals to the 0.04). 
+
+ let a = 0.2;
+ let b = 0.2;
+ console.log(a * b === 0.04);

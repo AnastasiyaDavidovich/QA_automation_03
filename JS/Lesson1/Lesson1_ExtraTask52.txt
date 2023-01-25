@@ -1,0 +1,9 @@
+Create a two-digit variable and find the remainder of the division on 7. 
+The result of the remainder of the division exponentiates on 3 and finds the type 
+of the result.
+
+ let a = 95;
+ let b = a % 7;
+ let c = b ** 3;
+ console.log(c);
+ console.log(typeof c);

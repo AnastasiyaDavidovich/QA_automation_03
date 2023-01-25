@@ -1,0 +1,20 @@
+Напишите функцию, которая принимает массив чисел arr и возвращает все пары одинаковых элементов в 
+виде двумерного массива
+Например, const arr = [2, 1, 5, 9, 6, 4, 1, 5, 6]
+Результат:            [[1, 1], [5, 5], [6, 6]]
+
+// function doublearr(arr){
+//   arr=arr.sort();
+//   let arr1 = [];
+//   for (let i = 0; i<arr.length; i++){
+//     if (arr[i]==arr[i+1]){
+// //       let arr1=[arr[i],arr[i]];
+//       arr1.push([arr[i],arr[i]]);
+//       i++;
+//     }
+//   }
+//   return arr1;
+// }
+
+// console.log(doublearr([2, 1, 5, 9, 1, 4, 1, 5, 1]));
+// console.log(doublearr(['a','v','c','d','a','c','x','v']))

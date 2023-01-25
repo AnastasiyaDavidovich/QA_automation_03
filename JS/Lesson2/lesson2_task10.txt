@@ -1,0 +1,4 @@
+Chack a number 166 is odd or even;
+
+ let b = 166;
+ console.log(b % 2 == 0);

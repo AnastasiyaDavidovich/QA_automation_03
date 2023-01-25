@@ -1,0 +1,5 @@
+Find what is smaller true or false;
+
+ let a = true;
+ let b = false;
+ console.log(a > b);

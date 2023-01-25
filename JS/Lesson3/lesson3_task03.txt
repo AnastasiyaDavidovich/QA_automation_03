@@ -1,0 +1,7 @@
+Задайте переменную х; Назначьте переменную typeX, равную типу данных х;Выведите в 
+консоль тип переменной typeX.
+
+
+ let x;
+ let typeX = typeof x;
+ console.log(typeof (typeof x));

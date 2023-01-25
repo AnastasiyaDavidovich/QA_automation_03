@@ -1,0 +1,9 @@
+Colleges are collecting money for the trip. Natalya gave 5147$, Jane gave 0$, 
+Marina gave 2358$, Olya gave 1249$. The trip costs 9800$. Will they go?(=> false).
+
+ let n = 5147;
+ let j = 0;
+ let m = 2358;
+ let o = 1249;
+
+ console.log((n + j + m + o) >= 9800);

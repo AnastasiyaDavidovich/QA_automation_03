@@ -1,0 +1,34 @@
+Write a method that will accept a string as an argument. The method will count the number of 
+appearances of each char and return map. The key will be a letter and the value will be a number 
+of appearances in the string. 
+See input and output in the example.
+countLetters("hello")    ->['h-1', 'e-1', 'l-2', 'o-1'] {{'h', 1}, {'e', 1}, {'l', 2}, {'o', 1}}
+countLetters("aauuchhh") -> {{'a', 2}, {'u', 2}, {'c', 1}, {'h', 3}}
+countLetters("aaaaaa")   -> {{'a', 6}}
+countLetters("abc")      -> {{'a', 1}, {'b', 1}, {'c', 1}}
+
+// function countLetters (str){
+//  // let srt = "hello"
+//   let arrL = [];
+//   let arrC = [];
+//   for (let i =0;i<str.length; i++){
+//    // let a = str[i];
+//     let count= 0;
+//        if (arrL.indexOf(str[i]) <0){
+//       count++;
+//       let n = i+1;
+//       arrL.push(str[i]);
+     
+//         while (str.indexOf(str[i],n)>0){
+//           count +=1;
+//           n =str.indexOf(str[i],n)+1;
+//           }
+//         arrC.push(count)
+//       }
+//      }
+//   console.log(arrL,arrC);
+      
+// }
+  
+//   countLetters("aauuchhh")
+
